@@ -2,6 +2,8 @@ import ru.zinnurov.Shop;
 
 
 /**
+ * Main class launching welcome menu
+ *
  * @author Nail Zinnurov
  * cobratms@gmail.com
  * on 09.10.2018

@@ -5,6 +5,8 @@ import java.util.List;
 import java.util.Scanner;
 
 /**
+ * Class that implements the basket interface
+ *
  * @author Nail Zinnurov
  * cobratms@gmail.com
  * on 23.10.2018

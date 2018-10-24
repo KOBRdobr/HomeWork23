@@ -4,6 +4,8 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
+ * Class store products store
+ *
  * @author Nail Zinnurov
  * cobratms@gmail.com
  * on 23.10.2018
