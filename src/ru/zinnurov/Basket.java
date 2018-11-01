@@ -9,7 +9,7 @@ import java.util.List;
  */
 
 public interface Basket {
-    void addProduct(int choice, int quantity, Products nameProducts);
+    void addProduct(String product, int quantity);
 
     void removeProduct(String product);
 
