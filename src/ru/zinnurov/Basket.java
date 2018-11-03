@@ -13,7 +13,7 @@ public interface Basket {
 
     void removeProduct(String product);
 
-    void updateProductQuantity(String product, int quantity);
+    void updateProductQuantity(String product, int quantity, int i);
 
     void clear();
 
