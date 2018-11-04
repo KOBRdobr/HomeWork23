@@ -8,7 +8,7 @@ import java.util.Scanner;
  * The Menu class implements a custom menu and product operations.
  *
  * @author Nail Zinnurov
- * @version 1.0
+ * @version 1.1
  * cobratms@gmail.com
  * on 03.11.2018
  */
@@ -62,7 +62,7 @@ public class Menu {
             System.out.println("Select the product you want to remove");
             int choice = input();
 
-            if (choice < userBasket.getProducts().size() && choice >= 1) userBasket.removeProduct(getProductToRemove(choice));
+            if (choice <= userBasket.getProducts().size() && choice >= 1) userBasket.removeProduct(getProductToRemove(choice));
             else System.out.println("This product is not available");
         }
         else System.out.println("Basket is empty!");
@@ -86,8 +86,8 @@ public class Menu {
 
     private void workWithProducts() {
         showTypeProducts();
-        showProducts();
-        chooseProductToAdd();
+        int choice = showProducts();
+        if(choice >= 0 && choice <= productType.length) chooseProductToAdd();
 
     }
 
@@ -102,13 +102,13 @@ public class Menu {
         }
     }
 
-    private void showProducts() {
+    private int showProducts() {
         int choice = input();
 
         System.out.println();
-        System.out.println("Choose product to buy");
 
         if(choice >= 0 && choice <= productType.length) {
+            System.out.println("Choose product to buy");
             productList = products.getProducts();
             indexProduct = new ArrayList<>();
 
@@ -121,6 +121,11 @@ public class Menu {
                 }
             }
         }
+        else {
+            System.out.println("This type product is not available");
+        }
+
+        return choice;
     }
 
     private void chooseProductToAdd() {

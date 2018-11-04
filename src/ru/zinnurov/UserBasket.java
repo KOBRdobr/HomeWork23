@@ -3,7 +3,7 @@ package ru.zinnurov;
 import java.util.*;
 
 /**
- * The class implements the interface Basket
+ * The class implements the interface Basket with List collection
  *
  * @author Nail Zinnurov
  * @version 1.0
