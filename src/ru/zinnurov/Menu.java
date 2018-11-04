@@ -62,7 +62,7 @@ public class Menu {
             System.out.println("Select the product you want to remove");
             int choice = input();
 
-            if (choice > 1) userBasket.removeProduct(getProductToRemove(choice));
+            if (choice < userBasket.getProducts().size() && choice >= 1) userBasket.removeProduct(getProductToRemove(choice));
             else System.out.println("This product is not available");
         }
         else System.out.println("Basket is empty!");
