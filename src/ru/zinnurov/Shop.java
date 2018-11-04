@@ -5,7 +5,10 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
+ * Main class Shop containing products
+ *
  * @author Nail Zinnurov
+ * @version 1.0
  * cobratms@gmail.com
  * on 09.10.2018
  */

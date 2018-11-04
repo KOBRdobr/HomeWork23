@@ -3,7 +3,10 @@ package ru.zinnurov;
 import java.util.*;
 
 /**
+ * The class implements the interface Basket
+ *
  * @author Nail Zinnurov
+ * @version 1.0
  * cobratms@gmail.com
  * on 26.10.2018
  */

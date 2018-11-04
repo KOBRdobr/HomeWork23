@@ -5,7 +5,10 @@ import java.util.List;
 import java.util.Scanner;
 
 /**
+ * The Menu class implements a custom menu and product operations.
+ *
  * @author Nail Zinnurov
+ * @version 1.0
  * cobratms@gmail.com
  * on 03.11.2018
  */

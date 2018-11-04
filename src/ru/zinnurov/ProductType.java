@@ -2,7 +2,10 @@ package ru.zinnurov;
 
 
 /**
+ * In ProductType enum stored types of products.
+ *
  * @author Nail Zinnurov
+ * @version 1.0
  * cobratms@gmail.com
  * on 26.10.2018
  */
