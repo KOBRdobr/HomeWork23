@@ -9,15 +9,15 @@ package ru.zinnurov;
  * cobratms@gmail.com
  * on 26.10.2018
  */
-
 public class Product {
-    private ProductType type;
-    private String name;
+    private final ProductType type;
+    private final String name;
+    private final int quantity;
 
-    public Product(ProductType type, String name) {
+    public Product(ProductType type, String name, int quantity) {
         this.type = type;
         this.name = name;
-
+        this.quantity = quantity;
     }
 
     public ProductType getType() {
@@ -26,5 +26,18 @@ public class Product {
 
     public String getName() {
         return name;
+    }
+
+    public int getQuantity() {
+        return quantity;
+    }
+
+    @Override
+    public String toString() {
+        return "Product{" +
+                "type=" + type +
+                ", name='" + name + '\'' +
+                ", quantity=" + quantity +
+                '}';
     }
 }

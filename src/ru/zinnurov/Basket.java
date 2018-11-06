@@ -7,17 +7,14 @@ import java.util.List;
  * cobratms@gmail.com
  * on 09.10.2018
  */
-
 public interface Basket {
-    void addProduct(String product, int quantity);
+    void addProduct(Product product);
 
-    void removeProduct(String product);
+    void removeProduct(Product product);
 
-    void updateProductQuantity(String product, int quantity, int i);
+    void updateProduct(Product product);
 
     void clear();
 
-    List<String> getProducts();
-
-    int getProductQuantity(String product);
+    List<Product> getProducts();
 }

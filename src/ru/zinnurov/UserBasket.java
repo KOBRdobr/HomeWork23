@@ -10,55 +10,34 @@ import java.util.*;
  * cobratms@gmail.com
  * on 26.10.2018
  */
-
 public class UserBasket implements Basket {
 
-    List<String> selectedProduct = new ArrayList<>();
+    private List<Product> selectedProduct = new ArrayList<>();
 
     @Override
-    public void addProduct(String product, int quantity) {
-        int i;
-        for (i = 0; i < selectedProduct.size(); i+=2) {
-            if (product.equalsIgnoreCase(selectedProduct.get(i))) {
-                updateProductQuantity(product, quantity, i);
-                break;
-            }
-        }
-        if(i == selectedProduct.size()) {
-            selectedProduct.add(product);
-            selectedProduct.add(String.valueOf(quantity));
-        }
+    public void addProduct(Product product) {
+        selectedProduct.add(product);
     }
 
     @Override
-    public void removeProduct(String product) {
-        for (int i = 0; i < selectedProduct.size(); i+=2) {
-            if(product.equalsIgnoreCase(selectedProduct.get(i))) {
-                selectedProduct.remove(i);
-                selectedProduct.remove(i);
-            }
-        }
-        System.out.println("Done!");
-        System.out.println();
+    public void removeProduct(Product product) {
+        selectedProduct.remove(product);
+        System.out.println("Product " + product + " was removed");
     }
     @Override
-    public void updateProductQuantity(String product, int quantity, int index) {
-        selectedProduct.set(index + 1, String.valueOf(quantity));
+    public void updateProduct(Product product) {
+        selectedProduct.set(selectedProduct.indexOf(product), product);
     }
 
     @Override
     public void clear() {
         selectedProduct.clear();
-        System.out.println("Done!");
+        System.out.println("Basket is cleared!");
     }
 
     @Override
-    public List<String> getProducts() {
+    public List<Product> getProducts() {
         return selectedProduct;
     }
 
-    @Override
-    public int getProductQuantity(String product) {
-        return 0;
-    }
 }

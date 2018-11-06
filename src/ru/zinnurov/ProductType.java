@@ -9,11 +9,14 @@ package ru.zinnurov;
  * cobratms@gmail.com
  * on 26.10.2018
  */
-
 public enum ProductType {
-    BREAD("Bread"), MILK("Milk"), VEGETABLES("Vegetables");
+    BREAD("Bread"),
+    MILK("Milk"),
+    VEGETABLES("Vegetables"),
+    ;
 
-    String typeName;
+    private String typeName;
+
     ProductType(String typeName) {
         this.typeName = typeName;
     }
